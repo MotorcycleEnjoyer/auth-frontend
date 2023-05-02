@@ -8,7 +8,7 @@ export default function UserPage () {
     let links = null
 
     if (isLoggedIn) {
-        links = ["./", "./Documents", "./Orders"]
+        links = [".", "./Documents", "./Orders"]
     }
 
     if (!isLoggedIn) {
