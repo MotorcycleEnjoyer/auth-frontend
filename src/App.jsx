@@ -19,12 +19,16 @@ function App() {
           element: <h1>Default HomePage</h1>,
         },
         {
-          path: "documents",
-          element: <h1>DOCUMENTS PAGE!!!</h1>
+          path: "about",
+          element: <h1>ABOUT PAGE!!!</h1>
         },
         {
-          path: "orders",
-          element: <h1>ORDERS PAGE!!!</h1>
+          path: "register",
+          element: <h1>REGISTRATION PAGE!!!</h1>
+        },
+        {
+          path: "login",
+          element: <h1>LOGIN PAGE!!!</h1>
         },
       ]
     },
