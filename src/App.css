@@ -1,5 +1,11 @@
+#root{
+    container-type: inline-size;
+}
+
 body{
     text-align: center;
+    margin: 0;
+    background-color: white;
 }
 
 .navBar{
@@ -13,13 +19,87 @@ body{
     font-size: 5rem;
 }
 
-.links{
+.linkContainer{
     display: flex;
-    font-size: 2.5rem;
-    gap: 2rem;
 }
 
-.links > * {
+.link{
     background-color: orange;
     flex: 1;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    transition: 0.1s;
+    font-size: 2.5rem;
+}
+
+.link:hover{
+    background-color: darkorange;
+    transition: 0.1s;
+}
+
+.radialMenu{
+    /* CONTAIN THE DIV, INSIDE A STICKY ELEMENT */
+    position: sticky;
+    bottom:0;
+}
+
+.radialMenuItem{
+    /* BASIC APPEARANCE */
+    background-color: red;
+    color: black;
+    box-shadow: black 0px 2px 5px;
+    text-decoration: none;
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    
+    /* VERTICAL ALIGN TEXT, TIME COLOR TRANSITION */
+    transition: 0.1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* CENTER DIV, MOVE DIV TO BOTTOM (to make sticky work properly) */
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.radialMenuItem:hover{
+    background-color: darkred;
+    color: white;
+    transition: 0.1s;
+}
+
+.radiaulMenuItem > * {
+    flex: 1;
+}
+
+.spacer{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+.menuButton{
+    text-align: center;
+    position: sticky;
+    bottom: 0px;
+    padding: 1rem;
+}
+
+.stickyItems{
+    overflow: hidden;
+}
+
+@container (max-width: 600px){
+    .link{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
 }
