@@ -5,9 +5,9 @@ export default function NavBar ({ ...props }) {
         <>
             <nav className="navBar">
                 <div className="brand">BRAND</div>
-                <div className="links">
+                <div className="linkContainer">
                     {props.links.map((x, index) => {
-                        return <NavLink key={index} to={x}>
+                        return <NavLink className="link" key={index} to={x}>
                                     {x.split("/")[1] || "Home"}
                                 </NavLink>
                     })}
